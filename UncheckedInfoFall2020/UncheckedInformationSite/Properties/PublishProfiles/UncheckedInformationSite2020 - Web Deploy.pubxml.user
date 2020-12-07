@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJDsriw2WiE2BVhEJMj2IpQAAAAACAAAAAAAQZgAAAAEAACAAAACmmq60X1Z3ORZwqRmEjwSq6WOpSrVgjdnIiuWHlZ01BgAAAAAOgAAAAAIAACAAAAAjVggOhKugKkqVSEQBuk7IysEat85MmU2aLjDki8HHG4AAAABkkyV2y6EVI9O0Lojp+gZoFgQuNe5CuNo1ITZ0r5tHYwJbIM/ENgImgDUtEW1hM28SmNyKpTlLm1Th6UcBmghsZHSRgCOME0cNs8fsX6kRrIr3rH4IhTVqyZPalXo2V0WPuKPRHlHHcmPt2R7DDO4VacRTol49TrdVC6CLBcrkMkAAAAA9zrU4RWdrgNrn+2iAnPYLbtzv4qKUOPXceEMA8Ibpdv88JzgUPDnRcYdKC6D/Q+NlZTs1ENtQeBC3BMLT+P4s</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ConnectionString">
+      <Value>Server=tcp:fall2020unchecked.database.windows.net,1433%3bInitial Catalog=UncheckedInfoFall2020%3bPersist Security Info=False%3bUser ID=Waltersi%3bPassword=Yui%3forRazor%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="UncheckedInformationSite.Models.MessageContext">
+      <Value>Server=tcp:fall2020unchecked.database.windows.net,1433%3bInitial Catalog=UncheckedInfoFall2020%3bPersist Security Info=False%3bUser ID=Waltersi%3bPassword=Yui%3forRazor%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

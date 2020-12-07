@@ -1,0 +1,35 @@
+﻿@model List<Message>
+@{
+    ViewData["Title"] = "Messages";
+}
+
+<a asp-controller="Blog" asp-action="SendMessage">Send a Message</a>
+
+<h1 class="display-4">Filter Reviews</h1>
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="MessageSender" class="control-label col-md-1">Sender:</label>
+        <input name="MessageSender" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <label for="MessageDate" class="control-label col-md-1">Date:</label>
+        <input type="date" name="MessageDate" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+        <a asp-action="Messages" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+
+<h2>Messages:</h2>
+@foreach (Message message in Model)
+{
+<p>
+    <h3><strong class="pr-3">Title:</strong> @message.MessageTitle </h3>
+    <h5><strong class="pr-3">Sender of Messages:</strong> @message.Messenger.Name </h5>
+    <strong class="pr-3">Text:</strong>
+    @message.MessageText <br />
+    <strong class="pr-3">Date Sent:</strong>
+    @message.MessageDate
+</p>
+}

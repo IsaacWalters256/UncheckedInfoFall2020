@@ -1,0 +1,27 @@
+﻿@model Message
+@{
+}
+
+<a asp-controller="Blog" asp-action="Messages">See all Messages</a>
+
+<div class="container">
+    <form method="post">
+        <div class="row">
+            <label asp-for="Messenger.Name" class="control-label col-sm-2 col-md-6">Name:</label>
+            <input asp-for="Messenger.Name" placeholder="Name" class="form-control col-sm-6 col-md-8" /><br />
+        </div>
+        <div class="row">
+            <label asp-for="MessageTitle" class="control-label col-sm-2 col-md-6">Message Title:</label>
+            <input asp-for="MessageTitle" placeholder="Title" class="form-control col-sm-6 col-md-8" /><br />
+        </div>
+        <div class="row">
+            <label asp-for="MessageText" class="control-label col-sm-2 col-md-6">Message Text:</label>
+            <input asp-for="MessageText" placeholder="Text" class="form-control col-sm-6 col-md-8" /><br />
+        </div>
+
+
+        <div class="row">
+            <button type="submit" class="form-control btn btn-primary col-sm-6 col-md-8 mt-3">Submit</button>
+        </div>
+    </form>
+</div>

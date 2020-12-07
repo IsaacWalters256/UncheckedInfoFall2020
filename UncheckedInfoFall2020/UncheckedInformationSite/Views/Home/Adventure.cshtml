@@ -1,0 +1,38 @@
+﻿@model AdventureVM
+@{
+    ViewData["Title"] = "Adventure";
+}
+
+<div class="text-center">
+    <h1 class="display-4">A text adventure game</h1>
+    <h3>Graveyard Quest II</h3>
+
+    <p>Instructions: Type the name of the thing you want to use or look at. Use lowercase only. Type look to look around the room</p>
+
+    <form method="post" class="container">
+
+        <label asp-for="HeldItem" class="disabled">Held Item: @Model?.HeldItem</label>
+        <br />
+
+        <label asp-for="UserResponse" class="control-label">Response:</label>
+        <input asp-for="UserResponse" type="text" class="form-control pb-1" />
+        <br />
+        <label asp-for="RoomNumber" class="control-label">Room Number (Select 1, 2, or 3):</label>
+        <input asp-for="RoomNumber" type="number" class="form-control pb-1" />
+        <br />
+
+        <input type="submit" class="btn btn-secondary" />
+        <br /> <br />
+        <h3>Current Text: </h3>
+        <label asp-for="CurrentText">@Model?.CurrentText</label>
+        <br /> <br />
+        <h4>Previous Text: </h4>
+        <label asp-for="PreviousText">@Model?.PreviousText</label>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <p>Cheats:</p>
+        <input asp-for="CurrentText" type="text" value="@Model?.CurrentText" />
+        <input asp-for="PreviousText" type="text" value="@Model?.PreviousText" />
+        <input asp-for="HeldItem" type="text" value="@Model?.HeldItem" />
+
+    </form>
+</div>
